@@ -1,0 +1,42 @@
+package com.codestates;
+
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+import java.util.HashMap;
+import java.util.Map;
+
+import static org.junit.jupiter.api.Assertions.assertDoesNotThrow;
+
+public class BeforeEach2Test {
+    private Map<String, String> map;
+
+    @BeforeEach
+    public void init() {
+        map = new HashMap<>();
+        map.put("BTC", "Bitcoin");
+        map.put("ETH", "Ethereum");
+        map.put("ADA", "ADA");
+        map.put("POT", "Polkadot");
+    }
+
+    @DisplayName("Test case 1")
+    @Test
+    public void beforeEachTest() {
+        map.put("XRP", "Ripple");
+        assertDoesNotThrow(() -> getCryptoCurrency("XRP"));
+        //assertDoesNotThrow = 예외가 발생하지 않는다고 기대하는 Assertion 메서드
+    }
+
+    @DisplayName("Test case 2")
+    @Test
+    public void beforeEachTest2() {
+        System.out.println(map);
+        assertDoesNotThrow(() -> getCryptoCurrency("XRP"));
+    }
+
+    private String getCryptoCurrency(String unit) {
+        return map.get(unit).toUpperCase();
+    }
+}
