@@ -5,12 +5,15 @@ import com.codestates.stamp.Stamp;
 import com.codestates.validator.NotSpace;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.Pattern;
 
 public class MemberDto {
+    @NoArgsConstructor
+    @AllArgsConstructor
     @Getter
     public static class Post {
         @NotBlank

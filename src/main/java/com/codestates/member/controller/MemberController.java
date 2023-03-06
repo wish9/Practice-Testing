@@ -34,8 +34,9 @@ public class MemberController {
     private final static String MEMBER_DEFAULT_URL = "/v11/members";
     private final MemberService memberService;
     private final MemberMapper mapper;
+    // final 을 사용해야하는 이유 = DI하는건 바꿀일이 업승니까 명시적으로 표기해주는 것!
 
-    public MemberController(MemberService memberService, MemberMapper mapper) {
+    public MemberController(MemberService memberService, MemberMapper mapper) { // 이거 대신 @RequiredArgsConstructor 써도 됨 // 대신 final붙이는거 주의
         this.memberService = memberService;
         this.mapper = mapper;
     }
