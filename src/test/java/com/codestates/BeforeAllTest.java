@@ -27,7 +27,7 @@ public class BeforeAllTest {
     @DisplayName("Test case 1")
     @Test
     public void beforeEachTest() {
-        assertDoesNotThrow(() -> getCryptoCurrency("XRP")); //assertDoesNotThrow = 예외가 발생하지 않는다고 기대하는 Assertion 메서드
+        assertDoesNotThrow(() -> getCryptoCurrency("XRP")); //assertDoesNotThrow 예외가 발생하지 않는다고 기대하는 Assertion 메서드
     }
 
     @DisplayName("Test case 2")

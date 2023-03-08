@@ -8,7 +8,7 @@ import static org.hamcrest.Matchers.*;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
 
-public class HelloHamcrestTest {
+public class HamcrestTest {
     @DisplayName("Hello Junit Test using hamcrest")
     @Test
     public void assertionTest1() {

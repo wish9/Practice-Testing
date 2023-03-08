@@ -27,7 +27,7 @@ class Section3Week3TemplateTestingApplicationTests {
 		assertEquals(expected, actual); // 두 값이 같은지 테스트
 	}
 
-	@DisplayName("AssertionNull() Test")
+	@DisplayName("assertEqionNull() Test")
 	@Test
 	public void assertNotNullTest() {
 		String currencyName = getCryptoCurrency("ETH"); // Null이 아닌지 테스트
